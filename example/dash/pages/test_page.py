@@ -1,10 +1,6 @@
-from dash import html
+from example.dash.components import h3
 from dash import register_page
+from dash import html
 
 
-class TestComponent(html.Div):
-	def __init__(self):
-		super().__init__([html.H3('Test Title')])
-
-
-register_page(__name__, layout=TestComponent(), path='/')
+register_page(__name__, path='/', layout=h3.H3Test())
